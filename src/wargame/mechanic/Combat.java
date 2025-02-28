@@ -21,4 +21,15 @@ public class Combat {
             swordsman.setDamage(40);
         }
     }
+
+    public void Attack(Soldier soldier, Soldier enemy){
+        if (soldier.getAttackRange() > enemy.getAttackRange()){
+            enemy.setHealth(enemy.getHealth() - soldier.getDamage());
+        } else if (soldier.getAttackRange() < enemy.getAttackRange()) {
+            soldier.setHealth(soldier.getHealth() - enemy.getDamage());
+        }else {
+            enemy.setHealth(enemy.getHealth() - soldier.getDamage());
+            soldier.setHealth(soldier.getHealth() - enemy.getDamage());
+        }
+    }
 }

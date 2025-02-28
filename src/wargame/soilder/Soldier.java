@@ -15,17 +15,10 @@ public abstract class Soldier {
         isAlive = true;
     }
 
-    public void Attack(Soldier soldier, Soldier enemy){
-        int wound = enemy.defense - soldier.damage;
-        if (soldier.damage <= 0){
-            damage = 0;
-        }else {
-            damage = enemy.health - wound;
-        }
-    }
+    public abstract void Attack(Soldier soldier, Soldier enemy);
 
-    public boolean isAlive(Soldier soldier){
-        if (soldier.health <= 0){
+    public boolean isAlive(Soldier soldier) {
+        if (soldier.health <= 0) {
             soldier.health = 0;
             soldier.isAlive = false;
         }
@@ -63,4 +56,6 @@ public abstract class Soldier {
     public void setAlive(boolean alive) {
         isAlive = alive;
     }
+
+
 }
