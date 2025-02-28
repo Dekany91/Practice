@@ -17,12 +17,11 @@ public abstract class Soldier {
 
     public abstract void Attack(Soldier soldier, Soldier enemy);
 
-    public boolean isAlive(Soldier soldier) {
-        if (soldier.health <= 0) {
-            soldier.health = 0;
-            soldier.isAlive = false;
+    public boolean isAlive(Soldier soldier){
+        if (soldier.getHealth() <= 0){
+            soldier.setAlive(false);
         }
-        return false;
+        return soldier.isAlive();
     }
 
     public int getHealth() {
