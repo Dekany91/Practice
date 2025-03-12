@@ -25,7 +25,7 @@ public class Army {
         }
     }
 
-    public void fillArmy() {
+    public List<Soldier> fillArmy() {
         Random rand = new Random();
         for (int i = 0; i < armySize; i++) {
             int randomSoldier = rand.nextInt(3);
@@ -37,6 +37,7 @@ public class Army {
                 soldiers.add(new Horseman());
             }
         }
+        return soldiers;
     }
 
     public List<Soldier> getSoldiers() {

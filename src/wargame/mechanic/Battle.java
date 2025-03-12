@@ -19,9 +19,9 @@ import wargame.soilder.Soldier;
         }
 
         public void startBattle() {
-            List<Soldier> hungarySoldiers = hungaryArmy.getSoldiers();
+            List<Soldier> hungarySoldiers = hungaryArmy.fillArmy();
             System.out.println("Hungary ready for battle!");
-            List<Soldier> turkeySoldiers = turkeyArmy.getSoldiers();
+            List<Soldier> turkeySoldiers = turkeyArmy.fillArmy();
             System.out.println("Turkey ready for battle!");
 
             for (int i = 0; i < Math.min(hungarySoldiers.size(), turkeySoldiers.size()); i++) {
@@ -32,9 +32,10 @@ import wargame.soilder.Soldier;
             }
             System.out.println("The battle has ended!");
 
-            private String getWinningKingMotto() {
-                }
+
             }
+
+
         }
-    }
+
 
