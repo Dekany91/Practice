@@ -6,12 +6,14 @@ import wargame.soilder.Soldier;
 import wargame.soilder.Swordsman;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Random;
 
 public class Army {
  private List<Soldier> soldiers;
  private int armySize = 50;
+ King king;
 
     public Army(List<Soldier> soldiers, int armySize) {
         this.armySize = armySize;
@@ -34,4 +36,19 @@ public class Army {
         }
         return soldiers;
     }
+
+
+    public King getKing() {
+        return king;
+    }
+
+    public void setKing(King king) {
+        this.king = king;
+    }
+
+
+    public Collection<Object> getSoldiers() {
+        return List.of(soldiers);
+    }
+
 }

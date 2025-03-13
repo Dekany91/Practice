@@ -1,5 +1,6 @@
 package wargame.mechanic;
 
+import wargame.army.Army;
 import wargame.soilder.Archer;
 import wargame.soilder.Horseman;
 import wargame.soilder.Soldier;
@@ -32,4 +33,6 @@ public class Combat {
             soldier.setHealth(soldier.getHealth() - enemy.getDamage());
         }
     }
+
+
 }

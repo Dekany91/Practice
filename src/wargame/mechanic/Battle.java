@@ -2,9 +2,6 @@ package wargame.mechanic;
 
 import java.util.List;
 import wargame.army.Army;
-import wargame.army.Hungary;
-import wargame.army.King;
-import wargame.army.Turkey;
 import wargame.soilder.Soldier;
 
     public class Battle {
@@ -34,7 +31,20 @@ import wargame.soilder.Soldier;
 
         }
 
+        public String battleLog(Army winner, Army loser) {
+            StringBuilder log = new StringBuilder();
+            log.append("Battle Summary:\n");
+            log.append("Winner Army: ").append(winner.getKing().getMotto()).append("\n");
+            log.append("Remaining Soldiers: ").append(winner.getSoldiers().size()).append("\n");
+            log.append("Loser Army: ").append(loser.getKing().getMotto()).append("\n");
+            log.append("Remaining Soldiers: ").append(loser.getSoldiers().size()).append("\n");
+            return log.toString();
+        }
 
     }
+
+
+
+
 
 

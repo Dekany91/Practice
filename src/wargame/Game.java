@@ -13,5 +13,6 @@ public class Game {
         Army turkey = new Army(List.of(), 500);
         Battle battle = new Battle( hungary, turkey);
         battle.startBattle();
+        battle.battleLog(hungary, turkey);
     }
 }

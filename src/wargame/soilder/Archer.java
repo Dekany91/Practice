@@ -21,5 +21,4 @@ public class Archer extends Soldier{
             soldier.setHealth(soldier.getHealth() - wound);
         }
     }
-
 }
