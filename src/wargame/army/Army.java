@@ -5,42 +5,33 @@ import wargame.soilder.Horseman;
 import wargame.soilder.Soldier;
 import wargame.soilder.Swordsman;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 public class Army {
  private List<Soldier> soldiers;
- private int armySize = 500;
- Soldier soldier;
+ private int armySize = 50;
 
     public Army(List<Soldier> soldiers, int armySize) {
         this.armySize = armySize;
-        if (soldiers.size() > armySize) {
-            this.soldiers = soldiers.subList(0, armySize);
-        } else {
-            this.soldiers = soldiers;
-            for (int i = soldiers.size(); i < armySize; i++) {
-                this.soldiers.add(soldier);
-            }
-        }
+        this.soldiers = soldiers;
     }
+
 
     public List<Soldier> fillArmy() {
+        if (soldiers.size() >= armySize) return soldiers;
         Random rand = new Random();
-        for (int i = 0; i < armySize; i++) {
+        List<Soldier> soldiers = new ArrayList<>();
+
+        while (soldiers.size() < armySize) {
             int randomSoldier = rand.nextInt(3);
-            if (randomSoldier == 0) {
-                soldiers.add(new Archer());
-            } else if (randomSoldier == 1) {
-                soldiers.add(new Swordsman());
-            } else {
-                soldiers.add(new Horseman());
+            switch (randomSoldier) {
+                case 0 -> soldiers.add(new Archer());
+                case 1 -> soldiers.add(new Swordsman());
+                case 2 -> soldiers.add(new Horseman());
             }
         }
-        return soldiers;
-    }
-
-    public List<Soldier> getSoldiers() {
         return soldiers;
     }
 }

@@ -32,10 +32,9 @@ import wargame.soilder.Soldier;
             }
             System.out.println("The battle has ended!");
 
-
-            }
-
-
         }
+
+
+    }
 
 

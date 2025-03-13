@@ -2,8 +2,6 @@ package wargame;
 
 
 import wargame.army.Army;
-import wargame.army.Hungary;
-import wargame.army.Turkey;
 import wargame.mechanic.Battle;
 
 import java.util.List;
